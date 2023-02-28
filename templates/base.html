@@ -9,6 +9,9 @@
   <meta content="#ffffff" name="theme-color" />
   <meta content="#da532c" name="msapplication-TileColor" />
 
+  {% block meta %}
+  {% endblock %}
+
   {% if config.extra.favicon.webmanifest %}
   <link href='{{ config.extra.favicon.webmanifest }}' rel="manifest" />
   {% endif %}
@@ -93,12 +96,12 @@
           {% endfor %}
           {% endif %}
           {% endfor %}
-          <a class="navbar-item" id="nav-search" title="Search" data-target="#search-modal">
+          <a class="navbar-item" id="nav-search" title="Search" data-target="#search-modal" href="#">
             <span class="icon">
               <i class="fas fa-search"></i>
             </span>
           </a>
-          <a class="navbar-item" id="dark-mode" title="Switch to dark theme">
+          <a class="navbar-item" id="dark-mode" title="Switch to dark theme" href="#">
             <span class="icon">
               <i class="fas fa-adjust"></i>
             </span>
